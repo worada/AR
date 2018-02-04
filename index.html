@@ -27,14 +27,17 @@ video.paused ? video.play() : video.pause();
    <a-scene>
 	   arjs="matrixCodeType: 3x3;"
 	   vr-mode-ui="enabled: false">
-	<a-marker typep"bracod" value="3">	
-       <a-image src="JH2 (2).jpg"></a-image>
-	 </a-maeker>  
-   <a-marker typep"bracod" value="5">	 
-	   <a-box position="0 0.5 0"
-	   material="color: blue;">
-	 </a-box>
-     <a-camera>
+		   <a-image src="JH2 (2).jpg"></a-image>
+		   <a-assets>
+		 video id= "worada" playsinline webkit-playsinline autoplay loop= "true"
+src= "worada.mp4" ></ video >
+</ a-assets >
+	<a-marker typep"bracod" value="5">
+		<a-video src="#worada" width="4" height="3"
+	   toggle -on-tap>
+		   </a-video>
+       </a-marker>  
+    <a-camera>
 	 </a-camera>
    </a-scene>
    </body>
